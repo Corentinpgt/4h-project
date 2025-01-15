@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="/style.css">
+{% endblock %}
+
+
+{% block body %}
+<h1>Welcome to Library, here are our books!</h1>
+<div class="container">
+    {% for book in books %}
+    <div class="card">
+
+        {% if book.coverImage %}
+        <img src="/uploads/images/covers/{{book.coverImage}}" alt="Cover image">
+        {% endif %}
+
+        <section class="card__header">
+            <h2 class="title">{{book.title}}</h2>
+            <p class="author">Author: {{book.author}}</p>
+            <p class="price">Price: {{book.price}}</p>
+        </section>
+
+        <ul class="genre__list">
+            {% for tag in book.tags %}
+            <li>{{tag.libelle}}</li>
+            {% endfor %}
+        </ul>
+
+
+        <a class="button" href="{{ path('book', { 'id': book.id }) }}">See More</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

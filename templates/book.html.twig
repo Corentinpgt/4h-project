@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block stylesheets %}
+{% endblock %}
+
+
+{% block body %}
+
+<button class="back"><a href="{{path('home')}}"><</a></button>
+    
+<div class="page">
+    {% if book.coverImage %}
+        <img src="/uploads/images/covers/{{book.coverImage}}" alt="Cover image">
+    {% endif %}
+
+    <section class="middle">
+        <section class="info">
+            <h2 class="infos__title">{{book.title}}</h2>
+            <p class="infos__author">Author: {{book.author}}</p>
+            <p class="infos__price">Price: {{book.price}}</p>
+        </section>
+
+        <section class="genres">
+            <p>Genres :</p>
+            <ul class="genre__list">
+                {% for tag in book.tags %}
+                <li>{{tag.libelle}}</li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <p class="description">Description: {{book.description}}</p>
+
+    </section>
+
+
+
+</div>
+        
+
+
+{% endblock %}
+
+
+{# {% if book.coverImage %}
+         <img src="/uploads/images/covers/{{book.coverImage}}" alt="Cover image">
+        {% endif %}
+
+            <h2 class="title">{{book.title}}</h2>
+            <p class="author">Author: {{book.author}}</p>
+            <p class="price">Price: {{book.price}}</p>
+
+        <ul class="genre__list">
+            {% for tag in book.tags %}
+            <li>{{tag.libelle}}</li>
+            {% endfor %}
+        </ul> #}

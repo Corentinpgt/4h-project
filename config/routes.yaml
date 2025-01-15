@@ -1,0 +1,19 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+
+
+home:
+    path: /
+    controller: App\Controller\DefaultController::home
+
+book:
+    path: /book/{id}
+    controller: App\Controller\DefaultController::book
+
+admin:
+    path: /admin
+    controller: App\Controller\Admin\DashboardController::index

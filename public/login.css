@@ -1,0 +1,83 @@
+/* Login */
+
+.login {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .5rem;
+    margin: 5rem auto 0;
+    width: 30rem;
+}
+
+.login h1 {
+    font-size: 2rem;
+    margin: 0 0 1rem;
+}
+
+.login input {
+    width: 100%;
+}
+
+.login button {
+    padding: .25rem .5rem;
+    background-color: rgb(27, 28, 35);
+    color: white;
+    border: none;
+    border-radius: .125rem;
+}
+
+.login button:hover {
+    cursor: pointer;
+}
+
+
+
+/* Register */
+
+.register {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .5rem;
+    margin: 5rem auto 0;
+    width: 30rem;
+}
+
+.register h1 {
+    font-size: 2rem;
+    margin: 0 0 1rem;
+}
+
+.register form {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .5rem;
+    width: 100%;
+}
+
+.register form div {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    width: 100%;
+}
+
+.register form div:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    gap: .25rem;
+    width: 100%;
+}
+
+.register button {
+    padding: .25rem .5rem;
+    background-color: rgb(27, 28, 35);
+    color: white;
+    border: none;
+    border-radius: .125rem;
+}
+
+.register button:hover {
+    cursor: pointer;
+}
